@@ -1,0 +1,33 @@
+name: My test
+on: 
+  push
+
+jobs:
+  job1:
+    name: first job
+    runs-on: ubuntu-latest
+    steps:
+      - name: first job steps
+        run: date
+        
+  job2:
+    name: second job
+    runs-on: windows-latest
+    steps: 
+      - name: second job steps
+        run: "Get-Date"
+        
+  job3:
+    name: third job
+    runs-on: macos-latest
+    steps: 
+      - name: third job steps
+        run: date
+
+  job4:
+    name: fourth job
+    runs-on: windows-latest
+    needs: [job1, job2, job3]
+    steps: 
+      - name: fourth job steps
+        run: "Get-Date"        
