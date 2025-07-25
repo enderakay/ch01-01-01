@@ -21,6 +21,7 @@ jobs:
           echo "${{ env.WORKSPACE_ENVIRONMENT_VARIABLE }}"
           echo "${{ env.JOB_ENVIRONMENT_VARIABLE }}"
           echo "${{ env.STEP_ENVIRONMENT_VARIABLE }} Not defined"
+          echo "${{ secrets.CURRENT_REGION }}"
   windows:
     env:
       JOB_ENVIRONMENT_VARIABLE: 'custom job environment variable for windows'
@@ -39,3 +40,4 @@ jobs:
           echo "${{ env.WORKSPACE_ENVIRONMENT_VARIABLE }}"
           echo "${{ env.JOB_ENVIRONMENT_VARIABLE }}"
           echo "${{ env.STEP_ENVIRONMENT_VARIABLE }} Not defined"
+          echo "${{ secrets.CURRENT_REGION }}"
